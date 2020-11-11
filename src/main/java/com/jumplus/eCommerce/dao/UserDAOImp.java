@@ -154,8 +154,8 @@ public class UserDAOImp implements UserDAO {
 			pstmt.setString(2, user.getName());
 			pstmt.setString(3, user.getPassword());
 			pstmt.setNString(4, user.getEmail());
-			pstmt.setString(2, user.getRole().name());
-			pstmt.setArray(0, (Array) user.getPurchases());
+			pstmt.setString(5, user.getRole().name());
+			pstmt.setArray(6, (Array) user.getPurchases());
 			
 			
 			
@@ -179,7 +179,7 @@ public class UserDAOImp implements UserDAO {
 	@Override
 	public User getUserByRole(ROLE role) {
 		// TODO Auto-generated method stub
- User user = null;
+		User user = null;
 		 
 		 try(PreparedStatement pstmt = conn.prepareStatement("select * from users where role = ?")) {
 				

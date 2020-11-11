@@ -17,7 +17,7 @@ public class ItemDAOImp implements ItemDAO {
 	@Override
 	public List<Item> getAllItems() {
 		// TODO Auto-generated method stub
-List<Item> items = new ArrayList<Item>();
+        List<Item> items = new ArrayList<Item>();
 		
 		try(Statement stmt = conn.createStatement();
 		ResultSet rs = stmt.executeQuery("select * from inventory"); ){
