@@ -82,7 +82,7 @@
 			<artifactId>spring-web</artifactId>
 			<version>4.2.3.RELEASE</version>
 		</dependency>
-  
+	
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>

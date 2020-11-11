@@ -18,8 +18,9 @@
 	<input type="password" name="password" required><br/>
 	<label for = "email">Email: </label>
 	<input type="text" name="email" required><br/>
+	<p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
 	<button type="submit">Register</button>
 </form>
-<a href="index.jsp">Log In</a>
+<a href="login.jsp">Log In</a>
 </body>
 </html>
