@@ -7,7 +7,7 @@
 
  
         
-<title>Home</title>
+<title>Login</title>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -26,45 +26,57 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="item.jsp">Products</a>
+        <a class="nav-link" href="index.jsp">Login <span class="sr-only">(current)</span></a>
       </li>
        <li class="nav-item">
-        <a class="nav-link" href="login.jsp">Login</a>
+        <a class="nav-link" href="#">About us</a>
       </li>
-     
+     <li class="nav-item">
+        <a class="nav-link" href="#">Contact us</a>
+      </li>
          
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    
   </div>
 </nav>
 <body>
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="https://cfmd.rencdn.com/thefurniturestorefortworthtx/web/uploads/imagegallery/images/living-room-banner.jpg" alt="First slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="https://cdn.shopify.com/s/files/1/1101/6302/files/4.jpg?v=1532935387" alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQaGENle2nDbcqWPLSmlPspg-p2jqFU3TAcbw&usqp=CAU" alt="Third slide">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
+<h1>Login</h1>
+
+
+	<p>Customer Log In</p>
+	<form action="/userlogin" method="post"><!-- This is for customer login -->
+	
+	 <div class="form-group">
+		<label for = "username">Username: </label>
+		<input type="text" class="form-control" name="username" required>
+		</div>
+		<div class="form-group">
+		<label for = "password">Password: </label>
+		<input type="password" class="form-control" name="password" required>
+		</div>
+		<button type="submit"class="btn btn-default" onclick="location.href = 'customerhome.jsp';" >Log In</button>
+	</form>
+<br/>
+
+
+	<p>Admin Log In</p>
+	<form action="/adminlogin" method="post"><!-- This is for admin login -->
+	<div class="form-group">
+		<label for = "username">Username: </label>
+		<input type="text" class="form-control" name="username" required>
+		</div>
+		<div class="form-group">
+		<label for = "password">Password: </label>
+		<input type="password" class="form-control" name="password" required>
+		</div>
+		<button type="submit"class="btn btn-default" onclick="location.href = 'adminhome.jsp';">Log In</button>
+	</form>
+	<br/>
+
+<a href ="register.jsp">Don't have an Account? Register now</a><br/>
+
+<a href ="adminhome.jsp">Admin skip log in, delete this before presentation</a><br/>
+<a href ="customerhome.jsp">Customer skip log in, delete this before presentation</a>
 
 
 </body>
