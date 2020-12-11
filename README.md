@@ -16,3 +16,6 @@ Admin
 -Login
 -Perform CRUD operation on products (Create,Read,Update,Delete)
 -Delete user from a list of users
+
+
+The application runs on http:://localhost:8080  on Tomcat 9.0 Server
